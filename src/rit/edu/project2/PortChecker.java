@@ -1,6 +1,5 @@
 package rit.edu.project2;
 
-import com.sun.xml.internal.ws.policy.privateutil.PolicyUtils;
 
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
