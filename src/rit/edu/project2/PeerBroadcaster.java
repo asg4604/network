@@ -16,6 +16,7 @@ public class PeerBroadcaster {
             DatagramPacket dp = new DatagramPacket(broadcastString.getBytes(), broadcastString.length(), InetAddress.getByName("255.255.255.255"), GossipProtocol.BROADCAST_PORT);
             DatagramSocket datagramSocket = new DatagramSocket();
             datagramSocket.send(dp);
+            datagramSocket.setBroadcast(true);
         } catch (IOException ioException) {
             System.out.println("Failed to broadcast message:" + broadcastString);
             ioException.printStackTrace();
