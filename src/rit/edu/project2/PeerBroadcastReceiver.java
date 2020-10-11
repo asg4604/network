@@ -29,7 +29,7 @@ public class PeerBroadcastReceiver extends Thread {
             } catch (UnknownHostException unknownHostException) {
                 unknownHostException.printStackTrace();
             }
-            if (!localIp.equals(message_content) || localIp.equals(message_content)) { // Fuck
+            if (!localIp.equals(message_content)) { // Fuck
                 peerCache.addPeersSeen(message_content);
             } else {
                 System.out.println("Seen our own broadcast: " + message_content);
