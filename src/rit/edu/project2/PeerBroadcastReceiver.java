@@ -47,7 +47,7 @@ public class PeerBroadcastReceiver extends Thread {
             InetSocketAddress zero_addr = new InetSocketAddress("0.0.0.0", bcPortNo);
             serverSocket.bind(zero_addr);
             byte[] receiveData = new byte[255];
-            String sendString = "ACK_BC:" + InetAddress.getLocalHost().getHostAddress();
+            String sendString = "BC:" + InetAddress.getLocalHost().getHostAddress();
             byte[] sendData = sendString.getBytes("UTF-8");
 
             System.out.printf("Listening on udp:%s:%d%n",
